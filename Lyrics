@@ -1,0 +1,13 @@
+import requests
+artist = input('What is your favourite artist?')
+title = input('What is your favourite song from them?')
+
+
+
+''' with open('favourite_lyrics.txt', 'w+' as lyrics_file:
+    for song in '''
+url = 'https://api.lyrics.ovh/v1/{}/{}'.format(artist, title)
+response = requests.get(url)
+lyrics = response.json()
+
+print(lyrics)
